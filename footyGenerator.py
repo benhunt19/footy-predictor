@@ -233,23 +233,14 @@ answer = input("Selection: ")
 
 
 
-#try:
 if (int(answer) -1) in [*range(suggestionLength)]:
-    print("got here1")
     newWeekData = pd.DataFrame({
         "week": [max(usedTeamsDF["week"].to_numpy()) + 1],
         "teamName": [sortedArrExcludeUsed[int(answer) - 1]["favourite"]],
         "teamID": [sortedArrExcludeUsed[int(answer) - 1]["favouriteID"]]
     })
-    print("got here2")
     newWeekData.to_csv('usedteams3.csv', mode='a', index=False, header=False)
-    print("got here3")
     dfUpdated = pd.read_csv("./usedteams3.csv")
-    print("got here4")
     print(f'{sortedArrExcludeUsed[int(answer) - 1]["favourite"]} added to list')
-    print(dfUpdated)
 else:
     print("Input not valid, team list not updated")
-
-#except:
-#    print("Non Valid argument, team list not updated")
