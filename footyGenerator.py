@@ -69,7 +69,7 @@ def getOdds(date, leagues, season):
 					   "bet": 1}
 
 		headers = {
-			"X-RapidAPI-Key": "864600b7dbmshebfba37bd0b19dfp1802a4jsnf85c0a07a34b",
+			"X-RapidAPI-Key": "** removed **",
 			"X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
 		}
 
