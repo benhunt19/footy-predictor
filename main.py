@@ -18,5 +18,5 @@ if __name__ == "__main__":
         gameTime=GAME_TIME,
         leagueIds=LEAGUE_IDS,
         season=SEASON,
-        filename=FILE_NAME
+        fileName=FILE_NAME
     )
