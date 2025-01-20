@@ -18,7 +18,7 @@ def dateNextSat() -> str:
     dateOnSat = str(dateOnSatObj.date())
     return dateOnSat
 
-def getFixtures(fromDate, toDate, season, leagues) -> list:
+def getFixtures(fromDate: str, toDate: str, season: str, leagues: list) -> list:
     """
     Description:
     Gets detail of all fixture json given the required paramaters,
@@ -66,7 +66,7 @@ def getFixtures(fromDate, toDate, season, leagues) -> list:
 
     return leagueFixtureArr
 
-def getOdds(date, leagues, season) -> list:
+def getOdds(date: str, leagues: list, season: str) -> list:
     """
     Description:
     Gets the odds for the games on a certain date for
@@ -76,12 +76,11 @@ def getOdds(date, leagues, season) -> list:
     data (string): The date of the fixtures
     eg. "2025-01-18"
     
-    season (string): The season the fixtures belong to
-    eg. "2024"
-    
     leagues (list): A list of the IDs of the leagues
     eg. [39,40,41,42]
     
+    season (string): The season the fixtures belong to
+    eg. "2024"
     """
     print("Retrieving Odds Data...")
     oddsArr = []
@@ -112,7 +111,7 @@ def getOdds(date, leagues, season) -> list:
 
     return oddsArr
 
-def tsStringValidator(ts, string) -> bool:
+def tsStringValidator(ts: datetime.timestamp, string: str) -> bool:
     """
     Description:
     Validates the time from a timestamp

@@ -1,7 +1,7 @@
 import pandas as pd
 from globalFunctions import *
 
-def footyGenerator(dateInput, leagueIds, season, gameTime, fileName):
+def footyGenerator(dateInput: str, leagueIds: list, season: str, gameTime: str, fileName: str) -> None:
     """
     Description:
     Main executable function, runs full process...
